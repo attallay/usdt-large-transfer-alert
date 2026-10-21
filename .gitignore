@@ -1,0 +1,21 @@
+# Dependencies (re-downloaded with `npm install`)
+node_modules/
+
+# Build and test output (re-created with `npm run build` / `npm run test:cov`)
+dist/
+coverage/
+*.tsbuildinfo
+
+# Secrets: NEVER commit these
+.env
+.env.*
+!.env.example
+backend/secrets/
+*firebase-adminsdk*.json
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
