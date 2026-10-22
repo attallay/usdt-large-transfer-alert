@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller.js';
+import { BlockchainModule } from './blockchain/blockchain.module.js';
 import { validateEnv } from './config/env.validation.js';
 import { NotificationsModule } from './notifications/notifications.module.js';
 
@@ -9,6 +10,7 @@ import { NotificationsModule } from './notifications/notifications.module.js';
     // Loads backend/.env, checks it with validateEnv, and shares ConfigService with every module.
     ConfigModule.forRoot({ isGlobal: true, validate: validateEnv }),
     NotificationsModule,
+    BlockchainModule,
   ],
   controllers: [AppController],
 })
